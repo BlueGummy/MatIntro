@@ -1,0 +1,73 @@
+%% Created by Maple 2015.1, Linux
+%% Source Worksheet: 4_1_maplesolve.mw
+%% Generated: Tue Sep 22 23:12:31 CEST 2015
+\documentclass{article}
+\usepackage{maplestd2e}
+\def\emptyline{\vspace{12pt}}
+\begin{document}
+\pagestyle{empty}
+\DefineParaStyle{Maple Heading 1}
+\DefineParaStyle{Maple Text Output}
+\DefineParaStyle{Maple Dash Item}
+\DefineParaStyle{Maple Bullet Item}
+\DefineParaStyle{Maple Normal}
+\DefineParaStyle{Maple Heading 4}
+\DefineParaStyle{Maple Heading 3}
+\DefineParaStyle{Maple Heading 2}
+\DefineParaStyle{Maple Warning}
+\DefineParaStyle{Maple Title}
+\DefineParaStyle{Maple Error}
+\DefineCharStyle{Maple Hyperlink}
+\DefineCharStyle{Maple 2D Math}
+\DefineCharStyle{Maple Maple Input}
+\DefineCharStyle{Maple 2D Output}
+\DefineCharStyle{Maple 2D Input}
+\mapleinline{inert}{2d}{DF := (x^2+1)*y(x)*(diff(y(x), x)) = x*(1+y(x)^2)}{\[\displaystyle {\it DF}\, := \, \left( {x}^{2}+1 \right) y \left( x \right) {\frac {\rm d}{{\rm d}x}}y \left( x \right) =x \left( 1+ \left( y \left( x \right)  \right) ^{2} \right) \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{(x^2+1)*y(x)*(diff(y(x), x)) = x*(1+y(x)^2)}{\[\displaystyle  \left( {x}^{2}+1 \right) y \left( x \right) {\frac {\rm d}{{\rm d}x}}y \left( x \right) =x \left( 1+ \left( y \left( x \right)  \right) ^{2} \right) \]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{dsolve(DF); 1}{\[\displaystyle {\it dsolve(DF);} \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{y(x) = sqrt(_C1*x^2+_C1-1), y(x) = -sqrt(_C1*x^2+_C1-1)}{\[\displaystyle y \left( x \right) = \sqrt{{\it \_C1}\,{x}^{2}+{\it \_C1}-1},\,y \left( x \right) =- \sqrt{{\it \_C1}\,{x}^{2}+{\it \_C1}-1}\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+\mapleinline{inert}{2d}{y := proc (x) options operator, arrow; sqrt(_C1*x^2+_C1-1) end proc}{$\displaystyle y\, := \,x\mapsto \sqrt {{\it \_C1}\,{x}^{2}+{\it \_C1}-1}$}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{proc (x) options operator, arrow; sqrt(_C1*x^2+_C1-1) end proc}{\[\displaystyle x\mapsto \sqrt {{\it \_C1}\,{x}^{2}+{\it \_C1}-1}\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{isolate(y(3) = 1, _C1)}{\[\displaystyle {\it isolate} \left( y \left( 3 \right) =1,{\it \_C1} \right) \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{_C1 = 1/5}{\[\displaystyle {\it \_C1}=1/5\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{isolate(y(3) = 3, _C1)}{\[\displaystyle {\it isolate} \left( y \left( 3 \right) =3,{\it \_C1} \right) \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{_C1 = 1}{\[\displaystyle {\it \_C1}=1\]}
+\end{maplelatex}
+\end{maplegroup}
+\mapleinline{inert}{2d}{isolate(y(3) = -7, _C1)}{\[\displaystyle {\it isolate} \left( y \left( 3 \right) =-7,{\it \_C1} \right) \]}
+\begin{maplegroup}
+\mapleresult
+\begin{maplelatex}
+\mapleinline{inert}{2d}{_C1 = 5}{\[\displaystyle {\it \_C1}=5\]}
+\end{maplelatex}
+\end{maplegroup}
+\begin{Maple Normal}{
+\begin{Maple Normal}{
+\mapleinline{inert}{2d}{}{\[\displaystyle \]}
+}\end{Maple Normal}
+}\end{Maple Normal}
+\end{document}
